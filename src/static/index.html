@@ -8,6 +8,25 @@
   </head>
   <body>
     <header>
+      <div id="admin-controls">
+        <button id="admin-toggle" type="button" aria-label="Teacher login">👤</button>
+        <div id="admin-panel" class="hidden">
+          <h3>Teacher Login</h3>
+          <form id="admin-login-form">
+            <div class="form-group">
+              <label for="admin-username">Username:</label>
+              <input type="text" id="admin-username" required />
+            </div>
+            <div class="form-group">
+              <label for="admin-password">Password:</label>
+              <input type="password" id="admin-password" required />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          <button id="admin-logout" type="button" class="hidden">Logout</button>
+          <p id="admin-status">Not logged in</p>
+        </div>
+      </div>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
     </header>
@@ -23,6 +42,7 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <p id="signup-locked-message" class="info">Teacher login required to register or unregister students.</p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
